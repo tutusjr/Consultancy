@@ -36,18 +36,17 @@ export default function Header() {
   return (
     <header
       className={`${
-        header ? "bg-body shadow-lg py-2" : "bg-transparent"
-      } fixed w-full max-w-[1920px] mx-auto z-[20] transition-all duration-300`}
+        header ? "bg-white shadow-sm py-2" : "bg-transparent"
+      } fixed w-full mx-auto z-[20] transition-all duration-300`}
     >
-      <div className="xl:container mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between">
+      <div className="xl:container  mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between">
         <div className="flex justify-between items-center px-4">
           {/* logo */}
           <Link
             to="home"
-            spy={true}
             smooth={desktopMode}
             duration={500}
-            className="cursor-pointer"
+            className={`${window.scrollY > 0 ? 'text-black' : 'text-white'} text-2xl font-bold cursor-pointer flex items-center h-[50px]`}
           >
             LOGO
           </Link>
@@ -64,19 +63,19 @@ export default function Header() {
           </div>
         </div>
         {/* nav */}
-        <nav className={`${nav ? 'max-h-max py-8 px-4 xl:py-0 xl:px-0' : 'max-h-0 xl:max-h-max'} flex flex-col w-full bg-white gap-y-6 overflow-hidden font-bold xl:font-medium xl:flex-row xl:w-max xl:gap-x-8 xl:h-max xl:bg-transparent xl:pb-0 transition-all duration-150 text-center`}>
+        <nav className={`${nav ? 'max-h-max items-center py-8 px-4 xl:py-0 xl:px-0' : 'max-h-0  xl:max-h-max'} flex flex-col w-full bg-white/50 gap-y-6 overflow-hidden font-bold xl:font-medium xl:flex-row xl:w-max xl:gap-x-8 xl:h-max xl:bg-transparent xl:pb-0 transition-all duration-150 text-center cl:text-left uppercase text-sm xl:text-[15px] xl:normal-case`}>
           <Link
-            className="curser-pointer"
+            className="inline-flex text-center justify-center"
             to="home"
             activeClass="active"
-            smooth
             spy
+            smooth
           >
             Home
           </Link>
           <Link
-            className="curser-pointer"
             to="hakkimizda"
+            className="inline-flex text-center w-fit justify-center"
             activeClass="active"
             smooth
             spy
@@ -84,8 +83,7 @@ export default function Header() {
             Hakkımızda
           </Link>
           <Link
-            className="curser-pointer"
-            to="bizeulasin"
+            to="contact"
             activeClass="active"
             smooth
             spy
@@ -93,7 +91,6 @@ export default function Header() {
             Bize Ulaşın
           </Link>
           <Link
-            className="curser-pointer"
             to="link4"
             activeClass="active"
             smooth

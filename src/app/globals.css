@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  a{
+    @apply cursor-pointer
+  }
   body {
     @apply text-primary bg-body;
   }

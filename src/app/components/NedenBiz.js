@@ -1,6 +1,6 @@
 
 export default function NedenBiz() {
   return (
-    <div>NedenBiz</div>
+    <div className="h-screen bg-green-200">NedenBiz</div>
   )
 }

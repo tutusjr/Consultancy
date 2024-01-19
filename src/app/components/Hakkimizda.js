@@ -2,6 +2,6 @@
 
 export default function Hakkimizda() {
   return (
-    <div>Hakkimizda</div>
+    <div id="hakkimizda" className="h-screen bg-red-200">Hakkimizda</div>
   )
 }

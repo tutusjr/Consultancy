@@ -6,18 +6,18 @@ import Contact from "./components/Contact"
 import Copyright from "./components/Copyright"
 import Hakkimizda from "./components/Hakkimizda"
 import BackToTop from "./components/BackToTop"
-import Hero from "./components/Hero"
+import Hero from "./components/hero/Hero"
 
 export default function Home() {
   return (
-    <main className="max-w-[1920px] bg-white mx-auto relative overflow-hidden">
+    <main className="bg-white mx-auto relative overflow-hidden">
       <Header />
       <Hero />
       <Hakkimizda />
       <NedenBiz />
       <Contact />
-      <BackToTop />
       <Footer />
+      <BackToTop />
       <div className="h-[4000px]"></div>
     </main>
   )
