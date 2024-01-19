@@ -6,7 +6,7 @@ import Contact from "./components/Contact"
 import Copyright from "./components/Copyright"
 import Hakkimizda from "./components/Hakkimizda"
 import BackToTop from "./components/BackToTop"
-import Hero from "./components/hero/Hero"
+import Hero from "./components/Hero"
 
 export default function Home() {
   return (

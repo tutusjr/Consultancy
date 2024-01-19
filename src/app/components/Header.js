@@ -46,7 +46,7 @@ export default function Header() {
             to="home"
             smooth={desktopMode}
             duration={500}
-            className={`${window.scrollY > 0 ? 'text-black' : 'text-white'} text-2xl font-bold cursor-pointer flex items-center h-[50px]`}
+            className={`${header ? 'text-black' : 'text-white'} text-2xl font-bold cursor-pointer flex items-center h-[50px]`}
           >
             LOGO
           </Link>
