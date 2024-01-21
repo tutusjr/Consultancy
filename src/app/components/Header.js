@@ -1,14 +1,9 @@
 "use client";
 import { useContext, useEffect, useState } from "react";
 
-//next image
-import Image from "next/image";
-
 //react scroll
-import { Link } from "react-scroll";
-
-//components
-import SearchMobile from "./SearchMobile";
+import { Link as ScrollLink} from "react-scroll";
+import Link from "next/link";
 
 //media query hook
 import { useMediaQuery } from "react-responsive";
@@ -36,17 +31,15 @@ export default function Header() {
   return (
     <header
       className={`${
-        header ? "bg-white shadow-sm py-2" : "bg-transparent"
+        header ? "bg-white shadow-sm py-2" : "xl:bg-transparent bg-white"
       } fixed w-full mx-auto z-[20] transition-all duration-300`}
     >
       <div className="xl:container  mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between">
         <div className="flex justify-between items-center px-4">
           {/* logo */}
           <Link
-            to="home"
-            smooth={desktopMode}
-            duration={500}
-            className={`${header ? 'text-black' : 'text-white'} text-2xl font-bold cursor-pointer flex items-center h-[50px]`}
+            href="/"
+            className={`${header ? 'text-black' : 'xl:text-white'} text-2xl font-bold cursor-pointer ml-3 xl:ml-0 flex items-center h-[50px]`}
           >
             LOGO
           </Link>
@@ -56,15 +49,15 @@ export default function Header() {
             className="cursor-pointer xl:hidden"
           >
             {nav ? (
-              <BiX className="text-4xl" />
+              <BiX className="text-4xl sm:mr-6" />
             ) : (
-              <BiMenuAltRight className="text-4xl" />
+              <BiMenuAltRight className="text-4xl sm:mr-6" />
             )}
           </div>
         </div>
         {/* nav */}
         <nav className={`${nav ? 'max-h-max items-center py-8 px-4 xl:py-0 xl:px-0' : 'max-h-0  xl:max-h-max'} flex flex-col w-full bg-white/50 gap-y-6 overflow-hidden font-bold xl:font-medium xl:flex-row xl:w-max xl:gap-x-8 xl:h-max xl:bg-transparent xl:pb-0 transition-all duration-150 text-center cl:text-left uppercase text-sm xl:text-[15px] xl:normal-case`}>
-          <Link
+          <ScrollLink
             className="inline-flex text-center justify-center"
             to="home"
             activeClass="active"
@@ -72,32 +65,29 @@ export default function Header() {
             smooth
           >
             Home
-          </Link>
+          </ScrollLink>
           <Link
-            to="hakkimizda"
+            href="/about"
             className="inline-flex text-center w-fit justify-center"
-            activeClass="active"
-            smooth
-            spy
           >
             Hakkımızda
           </Link>
-          <Link
+          <ScrollLink
             to="contact"
             activeClass="active"
             smooth
             spy
           >
             Bize Ulaşın
-          </Link>
-          <Link
+          </ScrollLink>
+          <ScrollLink
             to="link4"
             activeClass="active"
             smooth
             spy
           >
             Link4
-          </Link>
+          </ScrollLink>
         </nav>
       </div>
     </header>

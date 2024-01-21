@@ -4,11 +4,13 @@ import {motion} from 'framer-motion'
 
 //variants
 import {fadeIn} from '/variants'
+
+//buttons
 export default function Hero() {
   return (
     <section className="h-screen bg-cyan-200" id="home">
       <div className="relative w-full flex flex-col xl:flex-row justify-center items-center xl:justify-start h-full">
-        <div className="text-center z-10 absolute xl:max-w-xl xl:text-left ml-24 mt-16 xl:mt-0">
+        <div className="text-center z-10 absolute xl:max-w-xl xl:text-left xl:ml-24 mt-16 xl:mt-0">
           <motion.h1
             variants={fadeIn("right", 0.3)}
             initial="hidden"
