@@ -66,6 +66,14 @@ export default function Header() {
           >
             Home
           </ScrollLink>
+          <ScrollLink
+            to="deneyim"
+            activeClass="active"
+            smooth
+            spy
+          >
+            Deneyim
+          </ScrollLink>
           <Link
             href="/about"
             className="inline-flex text-center w-fit justify-center"
@@ -79,6 +87,14 @@ export default function Header() {
             spy
           >
             Bize Ulaşın
+          </ScrollLink>
+          <ScrollLink
+            to="link4"
+            activeClass="active"
+            smooth
+            spy
+          >
+            Link4
           </ScrollLink>
           <ScrollLink
             to="link4"
