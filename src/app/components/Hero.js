@@ -16,7 +16,7 @@ export default function Hero() {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="h1 z-50">
+            className="h1 z-50 xl:mx-0 mx-10">
             Sizin için en iyi olan{" "}
             <span className="text-red-700">danışmanlığı</span> belirleyin
           </motion.h1>
@@ -25,12 +25,12 @@ export default function Hero() {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }} 
-          className='font-bold text-xl text-primary text-shadow-lg shadow-black/30'>
+          className='font-bold text-xl text-primary xl:mx-0 mx-10 text-shadow-lg shadow-black/30'>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam sed accusantium velit aut excepturi eius?
           </motion.p>
         </div>
         <img
-          className="object-cover h-screen max-w-full w-full filter brightness-90"
+          className="object-cover  h-screen max-w-full w-full filter brightness-90"
           src="assets/images/hero.png"
           alt="resim"
         />
