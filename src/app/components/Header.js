@@ -89,12 +89,12 @@ export default function Header() {
             Bize Ulaşın
           </ScrollLink>
           <ScrollLink
-            to="link4"
+            to="nedenbiz"
             activeClass="active"
             smooth
             spy
           >
-            Link4
+            Neden Biz?
           </ScrollLink>
           <ScrollLink
             to="link4"
